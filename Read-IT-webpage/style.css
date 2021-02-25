@@ -1,0 +1,219 @@
+:root {
+  --white: #e5e5e5;
+  --black: #000;
+  --light-black: #333333;
+  --blue: #0078d4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+header {
+  background: var(--white);
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid var(--light-black);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo span {
+  color: var(--blue);
+}
+
+nav a {
+  margin-right: 1.5rem;
+
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  border-bottom: 1px solid var(--black);
+}
+
+main {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin-bottom: 5rem;
+  color: var(--light-black);
+}
+
+.hero-text {
+  padding-right: 1rem;
+  align-self: center;
+}
+
+.hero-text h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.hero-text p {
+  font-size: 21px;
+  margin: 1rem 0 2.5rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.try-free {
+  font-size: 16px;
+  color: var(--white);
+  padding: 1rem 2rem;
+  background: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 5px;
+}
+
+button.buy {
+  font-size: 16px;
+  color: var(--blue);
+  margin-left: 3rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 5px;
+}
+
+.hero-text p.hero-warning {
+  font-size: 14px;
+  margin: 1rem 0 0 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#features {
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+#features h2 span {
+  color: var(--blue);
+}
+
+#features p {
+  font-size: 21px;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.ebooks-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ebooks-list img {
+  max-width: 150px;
+  object-fit: cover;
+}
+
+#pricing {
+  margin-top: 5rem;
+}
+
+#pricing .cards {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+
+  margin-top: 2rem;
+}
+
+#pricing .card {
+  width: 300px;
+  height: 450px;
+  padding: 2rem;
+  align-self: center;
+
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+
+  position: relative;
+}
+
+#pricing .card.premium {
+  width: 400px;
+  height: 550px;
+}
+
+.card-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+.not-include {
+  color: red;
+}
+
+button.card-buy-btn {
+  font-size: 16px;
+  color: var(--white);
+  padding: 1rem 2rem;
+  background: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 5px;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: 30px;
+
+  width: calc(
+    100% - 4rem
+  ); /* 4 rem bc I'm applying 2rem to the right and left in the card container */
+}
