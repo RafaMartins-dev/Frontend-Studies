@@ -60,6 +60,11 @@ nav a:hover {
   border-bottom: 1px solid var(--black);
 }
 
+.hamburguer-menu {
+  width: 20px;
+  display: none;
+}
+
 main {
   max-width: 1420px;
   margin: 0 auto;
@@ -275,6 +280,14 @@ footer {
 }
 
 @media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  .hamburguer-menu {
+    display: initial;
+  }
+
   button.buy {
     margin-left: 0;
   }
