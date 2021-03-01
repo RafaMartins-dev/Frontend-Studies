@@ -182,7 +182,7 @@ main {
 
 .testimony__card {
   max-width: 400px;
-  max-height: 180px;
+  height: 180px;
   padding: 1rem;
   background: var(--background-dark);
 }
@@ -213,4 +213,65 @@ footer {
   text-align: center;
   padding: 1rem 0;
   background: var(--background-dark);
+}
+
+@media (max-width: 1260px) {
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .testimony__card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+
+    height: unset;
+    margin-bottom: 5rem;
+  }
+
+  .hero-info {
+    margin: 0;
+  }
+
+  .hero img {
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    max-width: 830px;
+  }
+}
+
+@media (max-width: 760px) {
+  nav {
+    display: none;
+  }
+
+  #course-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  #about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-info {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .about-info {
+    max-width: 500px;
+  }
 }
