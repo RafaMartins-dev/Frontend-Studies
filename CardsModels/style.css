@@ -1,5 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #eaeff1;
+  background-color: #111;
   font-family: "Raleway", sans-serif;
 }
 
@@ -12,15 +18,18 @@ body {
   margin: 10vh auto;
 }
 
-.card__container {
-  max-width: 300px;
+/* || Card Obe  */
+
+.card-one__container {
   margin: 0 auto;
 }
 
-.card {
+.card-one {
   background-color: white;
   padding: 8px;
 
+  width: 300px;
+  height: 450px;
   border-radius: 12px;
   border: 1px solid #bacdd8;
 }
@@ -33,7 +42,7 @@ img {
   object-fit: cover;
 }
 
-.card__details {
+.card-one__details {
   padding: 16px 8px 8px 8px;
 }
 
@@ -81,6 +90,105 @@ button:focus,
 button:hover {
   color: #e0efff;
   background-color: #0077ff;
+}
+
+/* || Card Two  */
+
+.card-two__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.card-two__content {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  padding: 8px;
+  color: white;
+  background: #111;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s ease-in-out;
+}
+.card-two__content:hover {
+  transform: translateY(-20px);
+}
+
+.card-two__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+
+.card-two__content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+  filter: blur(30px);
+}
+
+.card-two__content span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.card-two__content span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.card-two__info {
+  position: relative;
+  z-index: 10;
+  padding: 8px;
+}
+
+.card-two__info h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.card-two__info p {
+  font-size: 1.1em;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 1.4em;
+}
+
+.card-two__info a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: black;
+  background: #fff;
+  padding: 10px;
 }
 
 @media (max-width: 980px) {
