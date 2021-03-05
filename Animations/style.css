@@ -6,15 +6,16 @@
 
 body {
   font-family: "Poppins", sans-serif;
-}
-
-.buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: #111;
   height: 100vh;
+}
+
+.buttons {
+  margin: 2rem 0;
 }
 
 a {
@@ -90,4 +91,57 @@ a:hover span:nth-child(2) {
   transition-delay: 0.5s;
   opacity: 1;
   z-index: 10;
+}
+
+/* || Loading  */
+.loader {
+  position: relative;
+  -webkit-box-reflect: below -28px linear-gradient(transparent, #0002);
+  margin: 2em 0;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: #03e9f4;
+
+  animation: blinkCursor 0.8s steps(3) infinite;
+}
+
+@keyframes blinkCursor {
+  0%,
+  75% {
+    opacity: 1;
+  }
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader h2 {
+  position: relative;
+  font-family: consolas;
+  color: #03e9f4;
+  letter-spacing: 5px;
+  font-size: 4em;
+  text-transform: uppercase;
+  animation: typing 8s steps(10) infinite; /* 10 is the total number of characters */
+  overflow: hidden; /* because we are going to make the typing animation using the width of the text container */
+}
+
+@keyframes typing {
+  0%,
+  90%,
+  100% {
+    width: 0;
+  }
+  30%,
+  60% {
+    width: 416.16px;
+  }
 }
