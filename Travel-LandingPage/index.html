@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="showcase">
+    <header>
+      <h2><a href="/" class="logo">Travel</a></h2>
+      <div class="toggle"></div>
+    </header>
+
+    <!-- Add a video file here -->
+    <!-- GitHub has a file size limit, so it does not allow large files to be uploaded. -->
+    <video src="" muted loop autoplay></video> 
+
+    <div class="overlay"></div>
+
+    <div class="text">
+      <h2>Never Stop</h2>
+      <h3>Exploring The World</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum numquam quo dicta dolores iusto, 
+        officiis porro itaque similique pariatur! Dignissimos!
+      </p>
+      <a href="#">Explore</a>
+    </div>
+
+    <ul class="social">
+      <li><a href="#"><img src="media/facebook.png" alt="facebook link"></a></li>
+      <li><a href="#"><img src="media/twitter.png" alt="twitter link"></a></li>
+      <li><a href="#"><img src="media/instagram.png" alt="instagram link"></a></li>
+    </ul>
+  </section>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Destination</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector('.toggle')
+    const showcase = document.querySelector('.showcase')
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active')
+      showcase.classList.toggle('active')
+    })
+  </script>
+</body>
+</html>
