@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+.parallax-image1,
+.parallax-image2,
+.parallax-image3 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment: fixed;
+}
+
+.parallax-image1 {
+  background-image: url("img/street.jpg");
+  min-height: 100%;
+}
+
+.parallax-image2 {
+  background-image: url("img/train.jpg");
+  min-height: 400px;
+}
+
+.parallax-image3 {
+  background-image: url("img/skyline.jpg");
+  min-height: 400px;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.parallax-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.parallax-text .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.parallax-text .border.transparent {
+  background-color: transparent;
+}
+
+@media (max-width: 568px) {
+  .parallax-image1,
+  .parallax-image2,
+  .parallax-image3 {
+    background-attachment: scroll;
+  }
+
+  .section {
+    padding: 50px 20px;
+  }
+
+  .parallax-text {
+    letter-spacing: 2px;
+  }
+
+  .parallax-text .border {
+    padding: 10px;
+  }
+}
