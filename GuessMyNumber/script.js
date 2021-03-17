@@ -26,7 +26,7 @@ checkBtn.addEventListener("click", () => {
   if (!guess) {
     displayMessage("No Number!");
 
-    // When the player wins
+    // When the player guess wrong
   } else if (guess !== secretNumber) {
     if (score > 1) {
       displayMessage(guess > secretNumber ? "Too high" : "Too low");
@@ -36,6 +36,8 @@ checkBtn.addEventListener("click", () => {
       displayMessage("You lost the game!");
       setScore(0);
     }
+
+    // When the player wins
   } else if (guess === secretNumber) {
     displayMessage("Correct Number!");
     setSecretNumber(secretNumber);
