@@ -95,27 +95,64 @@ h3 {
   text-align: left;
 }
 
-.accordion__question.open {
-  font-weight: 700;
-}
-
 .accordion__question::after {
   content: "";
   display: block;
   width: 0.625rem;
   height: 1rem;
+  border: none;
   background-image: url("images/icon-arrow-down.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  transition: transform 300ms ease-in-out;
+}
+.accordion__question:focus,
+.accordion__question:focus-visible {
+  border: none;
+  outline: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+.accordion__question.open {
+  font-weight: 700;
+}
+
+.accordion__question.open::after {
+  transform: rotate(180deg);
 }
 
 .accordion__content {
   font-size: 0.75rem;
   line-height: 1.4;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
+.accordion__content p {
+  margin: 0;
+}
+
+.accordion__collapse {
+  transition: height 300ms ease;
+}
+
+.accordion__collapse.collapse {
+  display: none;
+}
+
+.accordion__collapse.collapsing {
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion__collapse.open {
+  display: block;
+}
+
+.attribution {
+  margin-top: 5rem;
+}
+
+/* DESKTOP STYLES */
 @media (min-width: 56em) {
   body {
     padding: 5rem;
@@ -129,6 +166,10 @@ h3 {
     background-image: url("images/bg-pattern-desktop.svg");
     background-size: 45%;
     background-position: -13% center;
+  }
+
+  .card__text h1 {
+    text-align: left;
   }
 
   .card__box {
